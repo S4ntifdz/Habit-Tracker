@@ -7,6 +7,7 @@ import { Navigation } from './components/Navigation';
 import { HabitForm } from './components/HabitForm';
 import { useHabits } from './context/HabitsContext';
 import { getMonthName } from './utils/dateUtils';
+import { Github } from 'lucide-react';
 
 type ViewType = 'week' | 'stats' | 'settings';
 
@@ -65,6 +66,24 @@ const AppContent: React.FC = () => {
       <main className="flex-1 px-4 py-6 max-w-md mx-auto w-full">
         {renderView()}
       </main>
+
+      {/* Footer con crédito */}
+      <footer className="px-4 py-3 border-t border-gray-200 bg-white">
+        <div className="max-w-md mx-auto">
+          <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
+            <span>By</span>
+            <a
+              href="https://github.com/S4ntifdz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 hover:underline"
+            >
+              <Github size={16} />
+              <span>S4ntifdz</span>
+            </a>
+          </div>
+        </div>
+      </footer>
 
       {/* Navigation */}
       <Navigation
