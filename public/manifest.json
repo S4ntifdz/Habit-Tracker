@@ -112,14 +112,14 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshot-mobile-1.png",
+      "src": "/screenshot.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Vista principal de hábitos semanales"
     },
     {
-      "src": "/screenshot-mobile-2.png",
+      "src": "/screenshot2.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
