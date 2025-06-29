@@ -3,7 +3,7 @@
   "short_name": "Hábitos Atómicos",
   "description": "Un planner de hábitos semanales basado en Hábitos Atómicos de James Clear",
   "start_url": "/",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#1E293B",
   "theme_color": "#3B82F6",
   "orientation": "portrait-primary",

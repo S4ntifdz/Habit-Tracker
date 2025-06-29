@@ -58,21 +58,21 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200 px-4 py-6">
+    <div className="h-screen bg-gray-50 flex flex-col overflow-hidden">
+      {/* Header fijo */}
+      <header className="bg-white shadow-sm border-b border-gray-200 px-4 py-4 flex-shrink-0">
         <div className="max-w-md mx-auto">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Hábitos Atómicos
               </h1>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs text-gray-600">
                 {currentMonth} {currentYear}
               </p>
             </div>
             <div className="text-right">
-              <div className="text-2xl">
+              <div className="text-xl">
                 {activeView === 'planner' ? '📅' : '🎯'}
               </div>
               <p className="text-xs text-gray-500 mt-1">
@@ -83,15 +83,17 @@ const AppContent: React.FC = () => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="flex-1 px-4 py-6 max-w-md mx-auto w-full">
-        {renderView()}
+      {/* Main Content - Scrolleable */}
+      <main className="flex-1 overflow-y-auto">
+        <div className="px-4 py-6 max-w-md mx-auto w-full pb-24">
+          {renderView()}
+        </div>
       </main>
 
-      {/* Footer con crédito */}
-      <footer className="px-4 py-3 border-t border-gray-200 bg-white">
+      {/* Footer con crédito - Fijo */}
+      <footer className="px-4 py-2 border-t border-gray-200 bg-white flex-shrink-0">
         <div className="max-w-md mx-auto">
-          <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
+          <div className="flex items-center justify-center space-x-2 text-xs text-gray-500">
             <span>By</span>
             <a
               href="https://github.com/S4ntifdz"
@@ -99,14 +101,14 @@ const AppContent: React.FC = () => {
               rel="noopener noreferrer"
               className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 hover:underline"
             >
-              <Github size={16} />
+              <Github size={14} />
               <span>S4ntifdz</span>
             </a>
           </div>
         </div>
       </footer>
 
-      {/* Navigation */}
+      {/* Navigation - Fija en la parte inferior */}
       <Navigation
         activeView={activeView}
         onViewChange={setActiveView}
