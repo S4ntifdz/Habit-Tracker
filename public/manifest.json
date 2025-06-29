@@ -44,7 +44,7 @@
       "url": "/?view=today",
       "icons": [
         {
-          "src": "/icon-96x96.png",
+          "src": "/icon-96.png",
           "sizes": "96x96"
         }
       ]
@@ -56,7 +56,7 @@
       "url": "/?view=planner",
       "icons": [
         {
-          "src": "/icon-96x96.png",
+          "src": "/icon-96.png",
           "sizes": "96x96"
         }
       ]
@@ -68,7 +68,7 @@
       "url": "/?view=stats",
       "icons": [
         {
-          "src": "/icon-96x96.png",
+          "src": "/icon-96.png",
           "sizes": "96x96"
         }
       ]
